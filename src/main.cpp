@@ -49,7 +49,7 @@ float getPression()
   pression /= 100.0F;
 
   // On calcule la pression relative au niveau de la mer (La pression diminue d'environ de 1 hPa tous les 8,3 m d'altitude)
-  pression += bme.readAltitude(SEALEVELPRESSURE_HPA) / 8.3F;
+  pression += ALTITUDE / 8.3F;
 
   return pression;
 }
